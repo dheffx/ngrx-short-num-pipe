@@ -1,7 +1,18 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
-//inspired by
-//https://stackoverflow.com/questions/17633462/format-a-javascript-number-with-a-metric-prefix-like-1-5k-1m-1g-etc
+/*
+    ShortNumPipe
+
+    Inspired by: https://stackoverflow.com/questions/17633462/format-a-javascript-number-with-a-metric-prefix-like-1-5k-1m-1g-etc
+
+    Takes a number, and shortens it.
+    Examples:
+    1000 -> 1K
+    1000000 -> 1M
+    1000000000 -> 1B
+
+    Decimal precision is 2
+*/
 
 @Pipe({name: 'shortnum'})
 export class ShortNumPipe implements PipeTransform {
